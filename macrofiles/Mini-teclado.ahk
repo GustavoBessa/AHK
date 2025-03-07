@@ -23,18 +23,6 @@ MicMute := False
             }
         }
     }
-    ^!+4::{
-        Loop 
-        {
-            N := Random(295, 360)
-            Click
-            Sleep N*10
-            If (A_Index > 10)
-                Break
-            ; Continue
-        }
-        Return
-    }
     ^!+5::
     {
         IsDown := GetKeyState("CapsLock", "T")
@@ -45,25 +33,6 @@ MicMute := False
             Sleep 1000
             Send "#+t"
         }
-    }
-    ^!+6::MsgBox(ThisHotkey,"Titulo","T1")
-    ^!+7::
-    {
-        IsDown := GetKeyState("CapsLock", "T")
-        if(IsDown==0){
-            MsgBox(ThisHotkey,"Titulo","T1")
-        }Else{
-            result := MsgBox("Fazer git clone de " A_Clipboard ,"git clone","Y/N")
-            if(result = "Yes"){
-                RUN("E:\AHK\macrofiles\visualcode.ps1",,"Hide")
-            }
-        }
-    }
-    ^!+8::
-    {
-        Send "^c"
-        ClipWait
-        RUN "http://www.google.com/search?q=" A_Clipboard
     }
     ^!+9::
     {

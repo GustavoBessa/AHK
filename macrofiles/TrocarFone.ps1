@@ -35,6 +35,7 @@ if($op -eq "change"){
 } catch {
     $result = $_.Exception.Message
 }
+Write-Output $result
 
 # $horaFormatada = (Get-Date).ToString("dd/MM/yyyy HH:mm:ss")
 # $scriptName = $MyInvocation.MyCommand.Name
